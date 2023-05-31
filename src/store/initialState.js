@@ -1,1 +1,1 @@
-export const initialState = { favouriteMovies: [] };
+export const initialState = { favouriteMovies: [], screenMode: 0 };

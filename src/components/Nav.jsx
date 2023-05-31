@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Nav.css";
 import axios from "axios";
-import { SET_MOVIES } from "../store/types";
+import { SET_MOVIES, SET_SCREEN_MODE } from "../store/types";
 
 class Nav extends Component {
   onGenreClick = async (e) => {
@@ -21,11 +21,16 @@ class Nav extends Component {
     });
   };
 
+  onFavouriteClick = () => {
+    this.props.dispatch({ type: SET_SCREEN_MODE, payload: 1 });
+  };
+
   render() {
     const { genres } = this.props;
 
     return (
       <div className="navLinkContainer">
+        <p onClick={this.onFavouriteClick}>Favourites</p>
         {genres.map((item) => {
           return (
             <p key={item.id} onClick={this.onGenreClick} id={item.id}>

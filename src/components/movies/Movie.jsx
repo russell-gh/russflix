@@ -22,7 +22,6 @@ class Movie extends Component {
       ? "#00ff00"
       : "#ff0000";
 
-    console.log(color);
     return (
       <div className="movieContainer">
         <h1>{title}</h1>

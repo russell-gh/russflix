@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Nav from "./Nav";
 import Index from "./movies";
 import "./Interface.css";
+import { connect } from "react-redux";
+import Favourites from "./movies/Favourites";
 
 class Interface extends Component {
   render() {
@@ -14,7 +16,8 @@ class Interface extends Component {
           </nav>
         </header>
         <main>
-          <Index />
+          {this.props.screenMode === 0 && <Index />}
+          {this.props.screenMode === 1 && <Favourites />}
         </main>
         <footer>Copyright 2023 Russ Flix</footer>
       </div>
@@ -22,4 +25,8 @@ class Interface extends Component {
   }
 }
 
-export default Interface;
+function mapStateToProps(state) {
+  return { screenMode: state.screenMode };
+}
+
+export default connect(mapStateToProps)(Interface);
