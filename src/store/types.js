@@ -1,1 +1,3 @@
 export const SET_GENRES = "SET_GENRES";
+export const SET_MOVIES = "SET_MOVIES";
+export const SET_FAVOURITE_MOVIE = "SET_FAVOURITE_MOVIE";

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Nav.css";
 import axios from "axios";
+import { SET_MOVIES } from "../store/types";
 
 class Nav extends Component {
   onGenreClick = async (e) => {
@@ -14,7 +15,10 @@ class Nav extends Component {
       }
     );
 
-    console.log(data);
+    this.props.dispatch({
+      type: SET_MOVIES,
+      payload: { id: e.target.id, movies: data.results },
+    });
   };
 
   render() {
@@ -24,7 +28,7 @@ class Nav extends Component {
       <div className="navLinkContainer">
         {genres.map((item) => {
           return (
-            <p onClick={this.onGenreClick} id={item.id}>
+            <p key={item.id} onClick={this.onGenreClick} id={item.id}>
               {item.name}
             </p>
           );
