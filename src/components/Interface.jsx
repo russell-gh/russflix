@@ -10,7 +10,7 @@ class Interface extends Component {
     return (
       <div className="appContainer">
         <header>
-          <h1>Russ Flix</h1>
+          <h1>Russ Flix v3 - test version</h1>
           <nav>
             <Nav />
           </nav>
