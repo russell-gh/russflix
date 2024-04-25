@@ -19,7 +19,7 @@ class Interface extends Component {
           {this.props.screenMode === 0 && <Index />}
           {this.props.screenMode === 1 && <Favourites />}
         </main>
-        <footer>Copyright 2023 Russ Flix</footer>
+        <footer>Copyright 2024 Russ Flix</footer>
       </div>
     );
   }
