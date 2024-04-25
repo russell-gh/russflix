@@ -10,7 +10,7 @@ class Interface extends Component {
     return (
       <div className="appContainer">
         <header>
-          <h1>Russ Flix v2</h1>
+          <h1>Russ Flix</h1>
           <nav>
             <Nav />
           </nav>
@@ -19,7 +19,7 @@ class Interface extends Component {
           {this.props.screenMode === 0 && <Index />}
           {this.props.screenMode === 1 && <Favourites />}
         </main>
-        <footer>Copyright 2023 Russ Flix</footer>
+        <footer>Copyright 2024 Russ Flix</footer>
       </div>
     );
   }
